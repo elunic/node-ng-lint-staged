@@ -1,0 +1,30 @@
+{
+  "name": "ng-lint-staged",
+  "version": "0.1.5",
+  "description": "Shim to run lint-staged with ng-lint",
+  "bin": {
+    "ng-lint-staged": "./ng-lint-staged.js"
+  },
+  "scripts": {},
+  "files": [
+    "./ng-lint-staged.js"
+  ],
+  "keywords": [
+    "angular",
+    "lint",
+    "staged",
+    "lint-staged"
+  ],
+  "author": {
+    "name": "William Hefter",
+    "email": "wh@elunic.com"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">= 6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/elunic/node-ng-lint-staged.git"
+  }
+}

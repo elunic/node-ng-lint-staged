@@ -17,8 +17,7 @@ the files list.
 {
   "lint-staged": {
     "src/**/*.ts": [
-        "ng-lint-staged lint --fix --",
-        "git add"
+        "ng-lint-staged lint --fix --"
     ]
   }
 }

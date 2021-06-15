@@ -27,7 +27,7 @@ for (const arg of process.argv) {
 const files = fileArgs.map(file => {
   // ng lint's --files argument only works with relative paths
   // strip cwd and leading path delimiter
-  return `--files="${path.relative(process.cwd(), file)}"`;
+  return `--lint-file-patterns="${path.relative(process.cwd(), file)}"`;
 });
 const npm = spawn('npm', ['run', script, '--', ...scriptArgs, ...files], {
   cwd: process.cwd(),

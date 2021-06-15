@@ -1,0 +1,21 @@
+name: publish
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    name: publish
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12'
+      - uses: JS-DevTools/npm-publish@v1
+        with:
+          package: package.json
+          token: ${{ secrets.NPM_TOKEN }}

@@ -11,7 +11,8 @@ const scriptArgs = [];
 const fileArgs = [];
 
 let filesSwitch = false;
-for (const arg of process.argv) {
+// NOTE: THE LOOP STARTS AT i = 3!
+for (let i = 3, iz = process.argv.length; i < iz; i++) {
   if (arg === '--') {
     filesSwitch = true;
     continue;

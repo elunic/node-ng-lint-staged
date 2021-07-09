@@ -26,7 +26,7 @@ Since Angular 12, the CLI option has been renamed to `--lint-file-patterns`. Use
 ```json
 {
   "lint-staged": {
-    "src/**/*.ts": ["ng-lint-staged lint --fix --", "git add"]
+    "src/**/*.ts": ["ng-lint-staged lint --fix"]
   }
 }
 ```

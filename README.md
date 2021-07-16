@@ -2,18 +2,19 @@
 
 Inspired by: https://github.com/angular/angular-cli/issues/7612#issuecomment-455802617
 
-Angular 7 provides the `--files` CLI option to lint certain files only instead of all project files. However, since `lint-staged` provides a regular list only, a tiny argument transformation is required.
+The Angular lint builder provides a CLI option to lint certain files only instead of all project files. However, since `lint-staged` provides a regular list only, a tiny argument transformation is required.
 
 This shim provides such a transformation.
 
-Since Angular 12, the CLI option has been renamed to `--lint-file-patterns`. Use version 12 of this package for Angular versions >= 12. See the versions table below.
-
 ## Package versions
 
-| Angular Version | `ng-lint-staged` version |
-| --------------- | ------------------------ |
-| `>= 7 <= 11`    | `^7.0.0`                 |
-| `>= 12`         | `^12.0.0`                |
+| Lint builder                           | `ng-lint-staged` version |
+| -------------------------------------- | ------------------------ |
+| `@angular-devkit/build-angular:tslint` | `^7.0.0`                 |
+| `@angular-eslint/builder:lint`         | `^12.0.0`                |
+
+The tslint builder has a `--files` CLI option whereas with the eslint builder it is named `--lint-file-patterns`.  
+Find which lint builder your are using in the `angular.json` file.
 
 ## Installation
 

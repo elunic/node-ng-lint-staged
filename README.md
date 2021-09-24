@@ -13,7 +13,7 @@ This shim provides such a transformation.
 | `@angular-devkit/build-angular:tslint` | `^7.0.0`                 |
 | `@angular-eslint/builder:lint`         | `^12.0.0`                |
 
-The tslint builder has a `--files` CLI option whereas with the eslint builder it is named `--lint-file-patterns`.  
+The tslint builder has a `--files` CLI option whereas with the eslint builder it is named `--lint-file-patterns`.
 Find which lint builder your are using in the `angular.json` file.
 
 ## Installation
@@ -22,7 +22,9 @@ Find which lint builder your are using in the `angular.json` file.
 
 ## Usage
 
-**Note** that a trailing `--` is required in the call to `ng-lint-staged` to inform it about the starting point of the files list.
+**Notes**
+* a trailing `--` is required in the call to `ng-lint-staged` to inform it about the starting point of the files list.
+* for `lint-staged < v10.0.0`, an additional `gid add` command may be required. See the `lint-staged` documentation for that version.
 
 ```json
 {

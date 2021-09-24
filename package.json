@@ -1,6 +1,6 @@
 {
   "name": "ng-lint-staged",
-  "version": "12.0.2",
+  "version": "12.0.3",
   "description": "Shim to run lint-staged with ng-lint",
   "bin": {
     "ng-lint-staged": "./ng-lint-staged.js"

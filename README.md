@@ -1,6 +1,6 @@
 # ng-lint-staged
 
-Inspired by: https://github.com/angular/angular-cli/issues/7612#issuecomment-455802617
+Inspired by: [https://github.com/angular/angular-cli/issues/7612#issuecomment-455802617](https://github.com/angular/angular-cli/issues/7612#issuecomment-455802617)
 
 The Angular lint builder provides a CLI option to lint certain files only instead of all project files. However, since `lint-staged` provides a regular list only, a tiny argument transformation is required.
 
@@ -22,9 +22,7 @@ Find which lint builder your are using in the `angular.json` file.
 
 ## Usage
 
-**Notes**
-* a trailing `--` is required in the call to `ng-lint-staged` to inform it about the starting point of the files list.
-* for `lint-staged < v10.0.0`, an additional `gid add` command may be required. See the `lint-staged` documentation for that version.
+To setup and use `ng-lint-staged` with `lint-staged`, add something like the following to your `package.json`:
 
 ```json
 {
@@ -33,6 +31,14 @@ Find which lint builder your are using in the `angular.json` file.
   }
 }
 ```
+
+### Notes
+
+* a trailing `--` is required in the call to `ng-lint-staged` to inform it about the starting point of the files list.
+* for `lint-staged < v10.0.0`, an additional `gid add` command may be required. See the `lint-staged` documentation for that version.
+* This command assumes you have an npm script named `lint` in your `package.json`. If your `npm` lint script is a different name, use that instead.
+  * It is important to note, this command should be as simplistic as possible `ng lint your-project-name`.
+    * If you want a script that performs the `--fix`, it is recommended you make an entirely new script for that.
 
 ## License
 

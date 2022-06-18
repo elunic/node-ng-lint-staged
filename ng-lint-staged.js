@@ -48,7 +48,7 @@ npm.stderr.on('data', data => {
 
 npm.on('close', code => {
   if (code) {
-    console.error(`Child process existed with code ${code}`);
+    console.error(`Child process exited with code ${code}`);
     process.exit(1);
   }
 });
